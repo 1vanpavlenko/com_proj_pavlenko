@@ -8,13 +8,13 @@ def fact(number: int):
     else:
         return number * fact(number - 1)
 
+
 def Ncd(a, b):
     while b:
         a, b = b, a % b
     return a
 
 
-<<<<<<< HEAD
 def is_prime(number: int):
     from math import ceil
 
@@ -33,7 +33,8 @@ def is_prime(number: int):
             return False
 
     return True
-=======
+
+
 def is_pow_of_five(number: int):
     if number < 1:
         return False
@@ -46,4 +47,13 @@ def is_pow_of_five(number: int):
 
     return is_pow_of_five(number // 5)
 
->>>>>>> 52485860e39eefbfdcc70d252c6ba47e960d58b2
+
+def from_dec_to_thirteen(dec_number: int):
+    alphabet = ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C')
+
+    if dec_number < 13:
+        return alphabet[dec_number]
+
+    else:
+        return from_dec_to_thirteen(dec_number // 13) + from_dec_to_thirteen(dec_number % 13)
+
