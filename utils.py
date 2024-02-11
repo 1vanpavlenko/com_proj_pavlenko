@@ -9,6 +9,7 @@ def fact(number: int):
         return number * fact(number - 1)
 
 
+<<<<<<< HEAD
 def is_prime(number: int):
     from math import ceil
 
@@ -27,3 +28,17 @@ def is_prime(number: int):
             return False
 
     return True
+=======
+def is_pow_of_five(number: int):
+    if number < 1:
+        return False
+
+    if number == 1:
+        return True
+
+    elif number % 5 != 0:
+        return False
+
+    return is_pow_of_five(number // 5)
+
+>>>>>>> 52485860e39eefbfdcc70d252c6ba47e960d58b2
