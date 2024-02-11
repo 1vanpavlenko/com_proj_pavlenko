@@ -8,6 +8,11 @@ def fact(number: int):
     else:
         return number * fact(number - 1)
 
+def Ncd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
 
 def is_pow_of_five(number: int):
     if number < 1:
